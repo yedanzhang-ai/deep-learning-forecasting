@@ -1,0 +1,2 @@
+model_type,model_name,model_score_type,smape,mape,mase,wape,rmsse,mae,rmse
+ml,lightgbm,forecast,9.7458,9.4569,0.6329,9.5753,0.6011,355.2283,421.1583

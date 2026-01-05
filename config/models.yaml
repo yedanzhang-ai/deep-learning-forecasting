@@ -1,0 +1,262 @@
+# Consolidated Model Configurations
+
+models:
+
+  # DEEP LEARNING MODELS
+  dl:
+    
+    # LSTM - Long Short-Term Memory      
+    lstm:
+      model_type: "dl"
+      covariate_support: "future"
+      supports_static_covariates: false
+      n_epochs_tune: 50
+      n_epochs_train: 100
+      n_trials: 50
+      early_stop_patience: 15
+      seed: 3
+      hp_space:
+        lookback: [8, 12, 26, 52]
+        hidden: [64, 128, 256]
+        layers: [2, 3]
+        dropout:
+          type: float
+          low: 0.1
+          high: 0.4
+        batch: [64, 128, 256]
+        lr:
+          type: log_float
+          low: 1.0e-4
+          high: 5.0e-3
+        weight_decay:
+          type: log_float
+          low: 1.0e-6
+          high: 1.0e-4
+
+  
+    # GRU - Gated Recurrent Unit  
+    gru:
+      model_type: "dl"
+      covariate_support: "future"
+      supports_static_covariates: false
+      n_epochs_tune: 50
+      n_epochs_train: 100
+      n_trials: 50
+      early_stop_patience: 15
+      seed: 3
+      hp_space:
+        lookback: [8, 12, 26, 52]
+        hidden: [64, 128, 256]
+        layers: [2, 3]
+        dropout:
+          type: float
+          low: 0.1
+          high: 0.4
+        batch: [64, 128, 256]
+        lr:
+          type: log_float
+          low: 1.0e-4
+          high: 5.0e-3
+        weight_decay:
+          type: log_float
+          low: 1.0e-6
+          high: 1.0e-4
+
+    # N-BEATS - Neural Basis Expansion Analysis  
+    nbeats:
+      model_type: "dl"
+      covariate_support: "none"
+      supports_static_covariates: false
+      n_epochs_tune: 50
+      n_epochs_train: 100
+      n_trials: 50
+      early_stop_patience: 15
+      seed: 3
+      hp_space:
+        lookback: [8, 12, 26, 52]
+        stacks: [2, 3, 4, 6, 8]
+        blocks: [1, 2, 3]
+        width: [128, 256, 512]
+        dropout:
+          type: float
+          low: 0.1
+          high: 0.4
+        batch: [64, 128, 256]
+        lr:
+          type: log_float
+          low: 1.0e-4
+          high: 5.0e-3
+        weight_decay:
+          type: log_float
+          low: 1.0e-6
+          high: 1.0e-4
+
+
+    # TCN - Temporal Convolutional Network  
+    tcn:
+      model_type: "dl"
+      covariate_support: "past"
+      supports_static_covariates: false
+      n_epochs_tune: 50
+      n_epochs_train: 100
+      n_trials: 50
+      early_stop_patience: 15
+      seed: 3
+      hp_space:
+        lookback: [8, 12, 26, 52]
+        filters: [64, 128, 256]
+        kernel: [3, 5]
+        dilation_base: [2, 3]
+        dropout:
+          type: float
+          low: 0.1
+          high: 0.4
+        batch: [64, 128, 256]
+        lr:
+          type: log_float
+          low: 1.0e-4
+          high: 5.0e-3
+        weight_decay:
+          type: log_float
+          low: 1.0e-6
+          high: 1.0e-4
+  
+    # TiDE - Time-series Dense Encoder  
+    tide:
+      model_type: "dl"
+      covariate_support: "future"
+      supports_static_covariates: true
+      n_epochs_tune: 50
+      n_epochs_train: 100
+      n_trials: 50
+      early_stop_patience: 15
+      seed: 3
+      hp_space:
+        lookback: [8, 12, 26, 52]
+        hidden: [32, 64, 128]
+        encoder_layers: [1, 2]
+        decoder_layers: [1, 2]
+        decoder_dim: [16, 32, 64]
+        temporal_width: [2, 4]
+        dropout:
+          type: float
+          low: 0.1
+          high: 0.4
+        batch: [64, 128, 256]
+        lr:
+          type: log_float
+          low: 1.0e-4
+          high: 5.0e-3
+        weight_decay:
+          type: log_float
+          low: 1.0e-6
+          high: 1.0e-4
+
+    # TFT - Temporal Fusion Transformer 
+    tft:
+      model_type: "dl"
+      covariate_support: "future"
+      supports_static_covariates: true
+      n_epochs_tune: 50
+      n_epochs_train: 100
+      n_trials: 50
+      early_stop_patience: 15
+      seed: 3
+      hp_space:
+        lookback: [8, 12, 26, 52]
+        hidden: [32, 64, 128]
+        lstm_layers: [1, 2]
+        heads: [2, 4]
+        dropout:
+          type: float
+          low: 0.1
+          high: 0.4
+        batch: [64, 128, 256]
+        lr:
+          type: log_float
+          low: 1.0e-4
+          high: 5.0e-3
+        weight_decay:
+          type: log_float
+          low: 1.0e-6
+          high: 1.0e-4
+
+
+  # MACHINE LEARNING MODELS  
+  ml:
+  
+    # LightGBM - Light Gradient Boosting Machine  
+    lightgbm:
+      model_type: "ml"
+      covariate_support: "future"
+      supports_static_covariates: true
+      n_trials: 50
+      seed: 3
+      hp_space:
+        lags: [8, 12, 26, 52]       
+        lags_future_covariates: [0, 4, 8, 12]
+        n_estimators: [50, 100, 200]
+        max_depth: [-1, 5, 10]
+        learning_rate:
+          type: log_float
+          low: 0.01
+          high: 0.3
+        num_leaves: [31, 63]
+        reg_alpha:
+          type: log_float
+          low: 1.0e-8
+          high: 1.0
+        reg_lambda:
+          type: log_float
+          low: 1.0e-8
+          high: 1.0
+
+
+    # XGBoost - Extreme Gradient Boosting 
+    xgboost:
+      model_type: "ml"
+      covariate_support: "future"
+      supports_static_covariates: true
+      n_trials: 50
+      seed: 3
+      hp_space:
+        lags: [8, 12, 26, 52]
+        lags_future_covariates: [0, 4, 8, 12]
+        n_estimators: [50, 100, 200]
+        max_depth: [3, 5, 7]
+        learning_rate:
+          type: log_float
+          low: 0.01
+          high: 0.3
+        reg_alpha:
+          type: log_float
+          low: 1.0e-8
+          high: 1.0
+        reg_lambda:
+          type: log_float
+          low: 1.0e-8
+          high: 1.0
+
+    # CatBoost - Categorical Boosting 
+    catboost:
+      model_type: "ml"
+      covariate_support: "future"
+      supports_static_covariates: true
+      n_trials: 50
+      seed: 3
+      hp_space:
+        lags: [8, 12, 26, 52]     
+        lags_future_covariates: [0, 4, 8, 12]
+        iterations: [50, 100, 200]
+        depth: [4, 6, 8]
+        learning_rate:
+          type: log_float
+          low: 0.01
+          high: 0.3
+        l2_leaf_reg:
+          type: log_float
+          low: 1.0e-8
+          high: 10.0
+
+
+   

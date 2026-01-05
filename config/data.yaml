@@ -1,0 +1,24 @@
+raw_data:  
+  sales:    "/data/raw/sales_train_evaluation.csv"
+  price:    "/data/raw/sell_prices.csv"
+  calendar: "/data/raw/calendar.csv"
+
+
+data: 
+  id_var: "id"
+  dt_var: "date"
+  target_var: "sales"
+  event_cov_vars: ["event_name_1", "event_name_2", "event_type_1", "event_type_2"]
+  num_cov_var: "sell_price"
+  bool_cov_var: "snap"
+  freq: "W-SAT"
+  forecast_horizon: 4
+  calendar_features:
+    date_features:  ['year']
+    cyclic_features: ['month', 'weekofyear']
+  
+  # Static covariates
+  static_cov_vars:
+    - "dept_id"
+    - "store_id"
+

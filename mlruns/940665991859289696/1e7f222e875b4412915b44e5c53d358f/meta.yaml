@@ -1,0 +1,15 @@
+artifact_uri: file:///kaggle/working/mlruns/940665991859289696/1e7f222e875b4412915b44e5c53d358f/artifacts
+end_time: 1767545741655
+entry_point_name: ''
+experiment_id: '940665991859289696'
+lifecycle_stage: active
+run_id: 1e7f222e875b4412915b44e5c53d358f
+run_name: tune_tide
+run_uuid: 1e7f222e875b4412915b44e5c53d358f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1767545741646
+status: 3
+tags: []
+user_id: root

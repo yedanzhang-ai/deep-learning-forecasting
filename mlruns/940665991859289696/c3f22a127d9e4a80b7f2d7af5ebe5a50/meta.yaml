@@ -1,0 +1,15 @@
+artifact_uri: file:///kaggle/working/mlruns/940665991859289696/c3f22a127d9e4a80b7f2d7af5ebe5a50/artifacts
+end_time: 1767545741633
+entry_point_name: ''
+experiment_id: '940665991859289696'
+lifecycle_stage: active
+run_id: c3f22a127d9e4a80b7f2d7af5ebe5a50
+run_name: tune_nbeats
+run_uuid: c3f22a127d9e4a80b7f2d7af5ebe5a50
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1767545741624
+status: 3
+tags: []
+user_id: root

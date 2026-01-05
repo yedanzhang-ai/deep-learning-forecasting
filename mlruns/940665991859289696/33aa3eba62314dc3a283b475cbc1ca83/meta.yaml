@@ -1,0 +1,15 @@
+artifact_uri: file:///kaggle/working/mlruns/940665991859289696/33aa3eba62314dc3a283b475cbc1ca83/artifacts
+end_time: 1767545741666
+entry_point_name: ''
+experiment_id: '940665991859289696'
+lifecycle_stage: active
+run_id: 33aa3eba62314dc3a283b475cbc1ca83
+run_name: tune_tft
+run_uuid: 33aa3eba62314dc3a283b475cbc1ca83
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1767545741657
+status: 3
+tags: []
+user_id: root

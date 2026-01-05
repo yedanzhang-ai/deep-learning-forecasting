@@ -1,0 +1,15 @@
+artifact_uri: file:///kaggle/working/mlruns/940665991859289696/649e9765c6444b92aa812eb14951e525/artifacts
+end_time: 1767545741612
+entry_point_name: ''
+experiment_id: '940665991859289696'
+lifecycle_stage: active
+run_id: 649e9765c6444b92aa812eb14951e525
+run_name: tune_lstm
+run_uuid: 649e9765c6444b92aa812eb14951e525
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1767545741602
+status: 3
+tags: []
+user_id: root

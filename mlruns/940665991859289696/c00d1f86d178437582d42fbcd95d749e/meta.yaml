@@ -1,0 +1,15 @@
+artifact_uri: file:///kaggle/working/mlruns/940665991859289696/c00d1f86d178437582d42fbcd95d749e/artifacts
+end_time: 1767545741622
+entry_point_name: ''
+experiment_id: '940665991859289696'
+lifecycle_stage: active
+run_id: c00d1f86d178437582d42fbcd95d749e
+run_name: tune_gru
+run_uuid: c00d1f86d178437582d42fbcd95d749e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1767545741614
+status: 3
+tags: []
+user_id: root
