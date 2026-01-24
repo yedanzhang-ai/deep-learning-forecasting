@@ -1,4 +1,4 @@
-# Retail Demand Forecasting Pipeline
+# Demand Forecasting Pipeline: Predictive Model Benchmark
 
 **An end-to-end system for automated model selection, hyperparameter optimization, and deployment across deep learning and machine learning architectures.**
 
@@ -23,7 +23,7 @@
 
 ## Project Overview
 
-The pipeline takes raw retail sales data and produces a tuned, tested forecasting model—no manual hyperparameter selection required. Run one command, get a production-ready model.
+The pipeline takes Kaggle M5 Walmart dataset and produces a tuned, tested forecasting model—no manual hyperparameter selection required. Run one command, get a production-ready model.
 
 Here's what happens under the hood:
 
